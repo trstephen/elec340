@@ -6,6 +6,7 @@
 	b) RHC
 		A = 1
 		phi_delta = -90deg
+		
 	c) LHE, gamma = 45
 		A = 1
 		phi_delta = 45deg
