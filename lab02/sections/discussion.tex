@@ -30,7 +30,7 @@ Changing the electric field arrangement to make the separation smaller and bound
 
 \paragraph{Task 8} \textit{Determine $\alpha$ and $\beta$ for the waveguide with dielectric from Section \ref{sec:dielectric}.}
 
-Fig. \ref{fig:Task3-mesh} can be used to determine the attenuation of the wave with equations \eqref{eqn:alpha} and \eqref{eqn:beta}.
+The lab manual suggests using Fig. \ref{fig:Task3-mesh} to determine the attenuation of the wave with equations \eqref{eqn:alpha} and \eqref{eqn:beta}.
 
 \begin{figure}[tbph]
 	\centering
@@ -42,9 +42,34 @@ Fig. \ref{fig:Task3-mesh} can be used to determine the attenuation of the wave w
 	\alpha &= { \ln \left( { E_z(x_1) \over E_z(x_2) } \right) \over m \Delta x } \label{eqn:alpha} \\
 	\beta &= { 2 \pi \over \lambda } \label{eqn:beta}
 \end{align}
-Choosing $x_1$ and $x_2$ as the positions of adjacent maxima, $\Delta x$ as 0.5 mm and $m$ as the number of grid squares separating $x_1$ and $x_2$ yields:
+This method poses a problem since the magnitude of the electric field is not displayed on the graph.
+Determining the ratio of two points is extremely imprecise.
 
-\textit{it's too small to be useful. no z scale either :(}
+In order to obtain more accurate measurements of $E_z$, a second probe was added to the animation \SI{5}{\milli\meter} closer to the source than the probe in Fig. \ref{fig:waveguide}.
+The $E_z$ response at both probes is shown in Fig. \ref{fig:Task3-probes}. 
+
+\begin{figure}[tbph]
+	\centering
+	\subfigure[35 mm]
+	{
+		\includegraphics[width=0.95\linewidth]{graphics/Task3-probe1}
+	}
+	\subfigure[40 mm]
+	{
+		\includegraphics[width=0.95\linewidth]{graphics/Task3-probe2}
+	}
+	\caption{$E_z$ response at different distances from source}
+	\label{fig:Task3-probes}
+\end{figure}
+
+Using the peak positive value for both probes with \eqref{eqn:alpha} gives:
+\begin{equation*}
+	\alpha = { \ln \left( { \SI{0.5703}{\volt\per\meter} \over \SI{0.5351}{\volt\per\meter} } \right) \over \SI{5}{\milli\meter}} = \SI{12.74}{\neper\per\meter}.
+\end{equation*}
+Using $\lambda = {c_o \over f}$ and $f = \SI{15}{\giga\hertz}$ in \eqref{eqn:beta}:
+\begin{equation*}
+	\beta = {f \times 2 \pi \over c_0} = \SI{314.38}{\radian\per\meter}.
+\end{equation*}
 
 \paragraph{Task 9} \textit{Compare the results of Task 8 to the theoretical values.}
 
@@ -52,13 +77,15 @@ The attenuation and phase constants are:
 \begin{align*}
 	\alpha &= { \omega \sqrt{\mu \epsilon} \over \sqrt{2} } \sqrt{\sqrt{1 + \left( {\sigma \over \omega \epsilon} \right)^2} - 1} \\
 	&= { \omega \sqrt{\epsilon_r} \over c_0 \sqrt{2} } \sqrt{\sqrt{1 + \left( {\sigma \over \omega \epsilon_0 \epsilon_r} \right)^2} - 1} \\
-	&= { 2 \pi \cdot \SI{10}{\giga\hertz} \cdot \sqrt{4} \over c_0 \sqrt{2} } \sqrt{\sqrt{1 + \left( {0.5 \over 2 \pi \cdot \SI{10}{\giga\hertz} \cdot \epsilon_0 \cdot 4} \right)^2} - 1} \\
-	&= \SI{7.39}{\neper\per\meter}
+	&= { 2 \pi \cdot \SI{15}{\giga\hertz} \cdot \sqrt{4} \over c_0 \sqrt{2} } \sqrt{\sqrt{1 + \left( {0.5 \over 2 \pi \cdot \SI{15}{\giga\hertz} \cdot \epsilon_0 \cdot 4} \right)^2} - 1} \\
+	&= \SI{46.96}{\neper\per\meter}
 \end{align*}
 \begin{align*}
 	\beta &= { \omega \sqrt{\mu \epsilon} \over \sqrt{2} } \sqrt{\sqrt{1 + \left( {\sigma \over \omega \epsilon} \right)^2} + 1} \\
-	&= \SI{46.80}{\radian\per\meter}
+	&= \SI{630.50}{\radian\per\meter}
 \end{align*}
+
+\textit{Oh no they don't agree :(}
 
 \paragraph{Task 10} \textit{Modify the waves in \texttt{Polarization\_TE.mef} to produce various kinds of polarizations}
 
