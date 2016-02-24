@@ -1,7 +1,11 @@
 \section{Discussion}\label{sec:discussion}
-\paragraph{Task 4} Compare the phase velocity 
+\paragraph{Task 4} \textit{Compare the phase velocity to what you found in Section \ref{sec:upw}.}
 
-\textit{I suspect that we totally messed this up :(}
+By recording the distance traveled by a wave peak in one step of the animation, we found that:
+\begin{equation*}
+	u_{ph} = {\Delta x \over \Delta t} = {\SI{0.5}{\milli\meter} \over \SI{0.166}{\pico\second}} = \SI{3.01E8}{\meter\per\second}.
+\end{equation*}
+We found that $\lambda = \SI{20}{\milli\meter}$ in Section \ref{sec:upw} which implies that $u_{ph} = c_0$. The discrepancy between the two numbers is likely the result of a rounding error in \mefisto.
 
 \paragraph{Task 7} \textit{Reduce the plate spacing to 4 mm and increase the width to 14 mm in the environment used for Section \ref{sec:non-ideal}.
 Does the far field in the $xy$ and $yz$ planes behave like a uniform plane wave?}
@@ -52,11 +56,11 @@ The $E_z$ response at both probes is shown in Fig. \ref{fig:Task3-probes}.
 	\centering
 	\subfigure[35 mm]
 	{
-		\includegraphics[width=0.95\linewidth]{graphics/Task3-probe1}
+		\includegraphics[width=0.95\linewidth]{graphics/35mm}
 	}
 	\subfigure[40 mm]
 	{
-		\includegraphics[width=0.95\linewidth]{graphics/Task3-probe2}
+		\includegraphics[width=0.95\linewidth]{graphics/40mm}
 	}
 	\caption{$E_z$ response at different distances from source}
 	\label{fig:Task3-probes}
@@ -64,11 +68,11 @@ The $E_z$ response at both probes is shown in Fig. \ref{fig:Task3-probes}.
 
 Using the peak positive value for both probes with \eqref{eqn:alpha} gives:
 \begin{equation*}
-	\alpha = { \ln \left( { \SI{0.5703}{\volt\per\meter} \over \SI{0.5351}{\volt\per\meter} } \right) \over \SI{5}{\milli\meter}} = \SI{12.74}{\neper\per\meter}.
+	\alpha = { \ln \left( { \SI{0.09919}{\volt\per\meter} \over \SI{0.07293}{\volt\per\meter} } \right) \over \SI{5}{\milli\meter}} = \SI{55.9}{\neper\per\meter}.
 \end{equation*}
-Using $\lambda = {c_o \over f}$ and $f = \SI{15}{\giga\hertz}$ in \eqref{eqn:beta}:
+Using $\lambda = \SI{10}{mm}$ in \eqref{eqn:beta}:
 \begin{equation*}
-	\beta = {f \times 2 \pi \over c_0} = \SI{314.38}{\radian\per\meter}.
+	\beta = {2 \pi \over \lambda} = \SI{628.31}{\radian\per\meter}.
 \end{equation*}
 
 \paragraph{Task 9} \textit{Compare the results of Task 8 to the theoretical values.}
@@ -85,7 +89,7 @@ The attenuation and phase constants are:
 	&= \SI{630.50}{\radian\per\meter}
 \end{align*}
 
-\textit{Oh no they don't agree :(}
+The numbers agree.
 
 \paragraph{Task 10} \textit{Modify the waves in \texttt{Polarization\_TE.mef} to produce various kinds of polarizations}
 
