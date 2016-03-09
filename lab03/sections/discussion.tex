@@ -132,8 +132,8 @@ Since the reflected wave is \SI{90}{\degree} out of phase it does not receive co
 		\toprule
 		Parameter             & Expected                   & Actual \\ 
 		\midrule
-		$E_{max}$             & ?? & \SI{0.6587}{\volt\per\meter} \\
-		$E_{min}$             & ?? & \SI{0.4573}{\volt\per\meter} \\
+		$E_{max}$             & \SI{0.749}{\volt\per\meter} & \SI{0.6587}{\volt\per\meter} \\
+		$E_{min}$             & \SI{0.436}{\volt\per\meter} & \SI{0.4573}{\volt\per\meter} \\
 		$l_{max}$             & \SI{42.5}{\milli\meter}    & $>42.5$\si{\milli\meter} \\
 		$l_{min}$             & \SI{50}{\milli\meter}      & $>50$\si{\milli\meter} \\
 		$\left|\Gamma\right|$ & 0.20 & 0.18 \\
@@ -143,6 +143,7 @@ Since the reflected wave is \SI{90}{\degree} out of phase it does not receive co
 \end{table}
 
 Error is introduced in the calculation of $\left|\Gamma\right|$ because measurements of successive nodes and antinodes to find the SWR does not account for the effect of attenuation. This causes SWR to be larger than expected, thus $\left|\Gamma\right|$ is smaller than expected.
+A similar error is introduced when calculating $E_{max}$ and $E_{min}$.
 
 \pagebreak
 \paragraph{Task 8} \textit{Design an impedance transformer with minimum thickness so that a 7.5 GHz wave can pass through without reflection.}
