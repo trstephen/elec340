@@ -1,0 +1,9 @@
+task 8:
+	center of H "pools" indicate positions of standing E vectors
+	mag of H same on both sides of boundary, as per boundary conditions (mu = 1 on both sides)
+	since no E on other side of boundary, H is not generated and dies out
+
+task 16:
+	use m = n = 1
+	solve fm,n, should get ~9GHz
+	
