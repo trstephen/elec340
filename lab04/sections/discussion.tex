@@ -5,16 +5,24 @@
 	\subfigure[$\epsilon_r = 1 \rightarrow \epsilon_r = 2$]
 	{
 		\includegraphics[width=0.475\linewidth]{graphics/Task2-1-to-2}
+		\label{subfig:1-2}
 	}
 	\subfigure[$\epsilon_r = 2 \rightarrow \epsilon_r = 1$]
 	{
 		\includegraphics[width=0.475\linewidth]{graphics/Task4-2-to-1}
+		\label{subfig:2-1}
 	}
 	\caption{Behavior at \SI{45}{\degree} incidence}
 	\label{fig:snell}
 \end{figure}
 
-\todo[inline]{Compute the angles of reflection and transmission}
+\todo[inline]{Compute the angles of reflection and transmission for \ref{subfig:1-2}}
+
+For Fig.~\ref{subfig:2-1}, the interface has a critical angle of:
+\begin{equation*}
+	\theta_c = \sin^{-1} \sqrt{{\epsilon_2 \over \epsilon_1}} = \sin^{-1} \sqrt{{1 \over 2}} = \SI{45}{\degree}.
+\end{equation*}
+Hence, $\theta_t = \SI{90}{\degree}$ and $\theta_r = \SI{45}{\degree}$.
 
 \paragraph{Task 6}\textit{Compare the images for $\epsilon_r$ = 2.0, 2.5, 3.0 in the ABC-bounded region.}
 
@@ -22,17 +30,33 @@
 	\subfigure[$\epsilon_r = 2.5 \rightarrow \epsilon_r = 1$]
 	{
 		\includegraphics[width=0.475\linewidth]{graphics/Task5-2,5-to-1}
+		\label{subfig:2,5-1}
 	}
 	\subfigure[$\epsilon_r = 3 \rightarrow \epsilon_r = 1$]
 	{
 		\includegraphics[width=0.475\linewidth]{graphics/Task6-3-to-1}
+		\label{subfig:3-1}
 	}
 	\caption{Behavior at \SI{45}{\degree} incidence}
 	\label{fig:TIR}
 \end{figure}
 
-\todo[inline]{Compute the TIR angles for the 2, 2.5, 3 to 1 interface.}
-\todo[inline]{Why does the ``spray'' into the second medium decrease as $\epsilon_r$ increases?}
+Both waves in Fig.~\ref{fig:TIR} experience total internal reflection.
+The critical angle, $\theta_c$, for Fig.~\ref{subfig:2,5-1} is
+\begin{equation*}
+	\theta_c = \sin^{-1} \sqrt{{1 \over 2.5}} = \SI{39}{\degree}
+\end{equation*}
+and for Fig.~\ref{fig:TIR}\ref{subfig:3-1}
+\begin{equation*}
+	\theta_c = \sin^{-1} \sqrt{{1 \over 3}} = \SI{35}{\degree}.
+\end{equation*}
+In both cases, the $\theta_i > \theta_c$ so total internal reflection occurs.
+Hence, $\theta_t = \SI{90}{\degree}$ and $\theta_r = \SI{45}{\degree}$ in both cases.
+
+The ``streaks'' in are larger in Fig.~\ref{subfig:2,5-1} than in Fig.~\ref{subfig:3-1} (and even larger in Fig.~\ref{subfig:2-1}).
+(14) From the lab manual tells us that $\vect{E}^{trans}_{\perp}$ is scaled by $\left|T_{\perp}\right|$ and $\left|T_{\perp}\right| \propto^{-1} \eta_1$ \cite{lab-manual}.
+Hence, $\vect{E}^{trans}_{\perp} \propto^{-1} \epsilon_1$.
+This is consistent with the streaks decreasing in size as $\epsilon_1$ increases.
 
 \paragraph{Task 8}\textit{Capture an animation of \vect{H} with pointer mode and comment on it.}
 
@@ -57,9 +81,9 @@ Since \vect{E} was reflected by the boundary, \vect{H} dissipates because it is 
 
 \subsection{Brewster angle}
 \paragraph{Task 9}\textit{Design a Brewster angle interface for zero reflection transmission of a plane wave from air to a dielectric with $\epsilon_r = 4$.}
-The Brewster angle for this interface is:
+Using \eqref{eqn:brewster}, the Brewster angle for this interface is:
 \begin{align*}
-	\tan\theta_B = \sqrt{{\epsilon_2 \over \epsilon_1}} \implies \theta_B = \tan^{-1}(2) = \SI{63.435}{\degree} 
+	\theta_B = \tan^{-1}(2) = \SI{63.435}{\degree} 
 \end{align*}
 The second medium is designed with a base of 200 mm and height of 400 mm to ensure an incidence angle of $\theta_B$.
 This is shown in Fig.~\ref{fig:Task9-Brewster}.
@@ -87,7 +111,6 @@ For $TE_{11}$, the cutoff frequency is:
 \begin{align*}
 	f_c = {u_{p0} \over 2} \sqrt{\left({m \over a}\right)^2 + \left({n \over b}\right)^2} = {c_0 \over 2} \sqrt{\left({1 \over \SI{30}{\milli\meter}}\right)^2 + \left({1 \over \SI{20}{\milli\meter}}\right)^2} = \SI{9.007}{\giga\hertz}
 \end{align*}
-\todo[inline]{verify calculation}
 This corresponds with the first peak of Fig.~\ref{fig:Task16-Analyzer}.
 
 
@@ -105,3 +128,4 @@ Fig.~\ref{fig:Task20-T30-50GHz} was generated with a source at \SI{50}{\giga\her
 	\label{fig:Task20-T30-50GHz}
 \end{figure}
 
+\todo[inline]{fix image alignment with pagebreaks (after copy is done)}
