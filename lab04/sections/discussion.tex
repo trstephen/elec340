@@ -1,13 +1,15 @@
+\pagebreak
 \section{Discussion}\label{sec:discussion}
 \subsection{Snell's Law}
 \paragraph{Task 4}\textit{Compare the angles of incidence, reflection and transmission in an air $\rightarrow \epsilon_r = 2$ and $\epsilon_r = 2 \rightarrow $air interface.}
+
 \begin{figure}[htpb]
-	\subfigure[$\epsilon_r = 1 \rightarrow \epsilon_r = 2$]
+	\subfigure[$\epsilon_r = 1 \rightarrow 2$]
 	{
 		\includegraphics[width=0.475\linewidth]{graphics/Task2-1-to-2}
 		\label{subfig:1-2}
 	}
-	\subfigure[$\epsilon_r = 2 \rightarrow \epsilon_r = 1$]
+	\subfigure[$\epsilon_r = 2 \rightarrow 1$]
 	{
 		\includegraphics[width=0.475\linewidth]{graphics/Task4-2-to-1}
 		\label{subfig:2-1}
@@ -15,8 +17,11 @@
 	\caption{Behavior at \SI{45}{\degree} incidence}
 	\label{fig:snell}
 \end{figure}
-
-\todo[inline]{Compute the angles of reflection and transmission for \ref{subfig:1-2}}
+For Fig.~\ref{subfig:1-2}, $\theta_i = \SI{45}{\degree}$, so:
+\begin{align*}
+	\sin \theta_t &= {1 \over \sqrt{2}} \sin \SI{45}{\degree} \implies \theta_t = \SI{30}{\degree} \\
+	\theta_r &= \theta_i = \SI{45}{\degree}
+\end{align*}
 
 For Fig.~\ref{subfig:2-1}, the interface has a critical angle of:
 \begin{equation*}
@@ -24,15 +29,16 @@ For Fig.~\ref{subfig:2-1}, the interface has a critical angle of:
 \end{equation*}
 Hence, $\theta_t = \SI{90}{\degree}$ and $\theta_r = \SI{45}{\degree}$.
 
+\pagebreak
 \paragraph{Task 6}\textit{Compare the images for $\epsilon_r$ = 2.0, 2.5, 3.0 in the ABC-bounded region.}
 
 \begin{figure}[htpb]
-	\subfigure[$\epsilon_r = 2.5 \rightarrow \epsilon_r = 1$]
+	\subfigure[$\epsilon_r = 2.5 \rightarrow 1$]
 	{
 		\includegraphics[width=0.475\linewidth]{graphics/Task5-2,5-to-1}
 		\label{subfig:2,5-1}
 	}
-	\subfigure[$\epsilon_r = 3 \rightarrow \epsilon_r = 1$]
+	\subfigure[$\epsilon_r = 3 \rightarrow 1$]
 	{
 		\includegraphics[width=0.475\linewidth]{graphics/Task6-3-to-1}
 		\label{subfig:3-1}
@@ -58,12 +64,13 @@ The ``streaks'' in are larger in Fig.~\ref{subfig:2,5-1} than in Fig.~\ref{subfi
 Hence, $\vect{E}^{trans}_{\perp} \propto^{-1} \epsilon_1$.
 This is consistent with the streaks decreasing in size as $\epsilon_1$ increases.
 
+\pagebreak
 \paragraph{Task 8}\textit{Capture an animation of \vect{H} with pointer mode and comment on it.}
 
 \begin{figure}[tbph]
 	\centering
 	\includegraphics[width=0.8\linewidth]{graphics/Task8-Pointers}
-	\caption{\vect{H} for $\epsilon_r = 3 \rightarrow \epsilon_r = 1$}
+	\caption{\vect{H} for $\epsilon_r = 3 \rightarrow 1$}
 	\label{fig:Task8-Pointers}
 \end{figure}
 
@@ -73,10 +80,11 @@ As per Ampere's Law, \vect{H} curls around the perpendicular \vect{E} field, cre
 Fig.~\ref{fig:Task8-Pointers-Inset} shows that \vect{H} is not altered by the boundary.
 \begin{figure}[tbph]
 	\centering
-	\includegraphics[width=0.6\linewidth]{graphics/Task8-Pointers-Inset}
+	\includegraphics[width=0.4\linewidth]{graphics/Task8-Pointers-Inset}
 	\caption{Inset view of Fig.~\ref{fig:Task8-Pointers}}
 	\label{fig:Task8-Pointers-Inset}
 \end{figure}
+
 Since \vect{E} was reflected by the boundary, \vect{H} dissipates because it is not able to generate itself in isolation.
 
 \subsection{Brewster angle}
@@ -96,6 +104,7 @@ This is shown in Fig.~\ref{fig:Task9-Brewster}.
 \end{figure}
 
 
+\pagebreak
 \subsection{Rectangular waveguides and cavities}
 \paragraph{Task 16}\textit{Obtain the resonant frequencies of the constructed waveguide and compare it to the calculated values.}
 
@@ -127,5 +136,3 @@ Fig.~\ref{fig:Task20-T30-50GHz} was generated with a source at \SI{50}{\giga\her
 	\caption{Transmission in a $TE_{30}$ waveguide}
 	\label{fig:Task20-T30-50GHz}
 \end{figure}
-
-\todo[inline]{fix image alignment with pagebreaks (after copy is done)}
